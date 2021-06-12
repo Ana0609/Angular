@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "BirthdayProject": {
+    "empty": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "styleext": "less"
         },
         "@schematics/angular:application": {
           "strict": true
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/BirthdayProject",
+            "outputPath": "dist/empty",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,7 +31,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.less"
             ],
             "scripts": []
           },
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "BirthdayProject:build"
+            "browserTarget": "empty:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "BirthdayProject:build:production"
+              "browserTarget": "empty:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "BirthdayProject:build"
+            "browserTarget": "empty:build"
           }
         },
         "test": {
@@ -94,7 +94,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.less"
             ],
             "scripts": []
           }
@@ -112,20 +112,20 @@
             ]
           }
         },
-        "e2e": {
+        "empty-e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "BirthdayProject:serve"
+            "devServerTarget": "empty:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "BirthdayProject:serve:production"
+              "devServerTarget": "empty:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "BirthdayProject"
+  "defaultProject": "empty"
 }
