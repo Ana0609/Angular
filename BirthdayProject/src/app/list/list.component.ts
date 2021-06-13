@@ -17,6 +17,7 @@ export class ListComponent implements OnInit {
 
   addTask(){
     this.taskList.push(new Task());
+    this.taskList[length].status='not done';
   }
 
   removeTask(index:number){
@@ -24,4 +25,17 @@ export class ListComponent implements OnInit {
       this.taskList.splice(index,1);
     } 
   }
+
+  ChangeStatus(index:number)
+  {
+    if(this.taskList[index].status=='not done'){
+      this.taskList[index].status='done';
+    }
+    else{
+      this.taskList[index].status='not done';
+    }
+
+  }
+  
+  
 }

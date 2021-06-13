@@ -1,13 +1,8 @@
-<p>
-  list works!
-</p>
-
-  <div>
+ <div>
     <button (click)="addTask()">Add Task</button>
   </div>
 
-  <div class="task" *ngFor="let task of taskList; let i = index">
-
+  <div class="task" *ngFor="let task of taskList; let i = index;" >
     <div>
       <span class="title">Task number:</span> {{i +1}}
   
@@ -15,16 +10,28 @@
         <button (click)='removeTask(i)'> X</button>
       </span>
     </div>
-  
-  
+    
+    
     <div>
       <span class="title"> Title:</span>
       <input [(ngModel)]="task.title" type="text">
     </div>
-  
+    
     <div> 
       <span class="title"> Description:</span>
       <input [(ngModel)]="task.description" type="text">
     </div>
-  
+
+    <div>
+      <span class="date">Date:</span>
+      <input [(ngModel)]="task.date" type="date">
+    </div>
+    
+    <div> 
+      <span class="status"> Status:</span>
+      <input [(ngModel)]="task.status" type="text">
+    </div>
+
+    <button (click)='ChangeStatus(i)'>Todo Done</button>
+
   </div> 
