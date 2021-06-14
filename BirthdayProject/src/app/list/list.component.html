@@ -1,8 +1,9 @@
- <div>
-    <button (click)="addTask()">Add Task</button>
-  </div>
+<div>
+  <button (click)="addTask()">Add Task</button>
+</div>
 
   <div class="task" *ngFor="let task of taskList; let i = index;" >
+
     <div>
       <span class="title">Task number:</span> {{i +1}}
   
@@ -22,14 +23,24 @@
       <input [(ngModel)]="task.description" type="text">
     </div>
 
+    <div> 
+      <span class="title"> Solving time:</span>
+      <input [(ngModel)]="task.time" type="text">
+    </div>
+
+    <div> 
+      <span class="title"> Category:</span>
+      <input [(ngModel)]="task.category" type="text">
+    </div>
+
     <div>
-      <span class="date">Date:</span>
+      <span class="title">Date:</span>
       <input [(ngModel)]="task.date" type="date">
     </div>
     
     <div> 
-      <span class="status"> Status:</span>
-      <input [(ngModel)]="task.status" type="text">
+      <span class="title"> Status:</span>
+      <input [(ngModel)]="task.status" type="text" id="not done">
     </div>
 
     <button (click)='ChangeStatus(i)'>Todo Done</button>

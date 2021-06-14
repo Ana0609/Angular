@@ -4,5 +4,5 @@ export class Task {
     public time: string | undefined;
     public category: string | undefined;
     public date: Date | undefined;
-    public status: string | 'not done'| undefined;
+    public status: string | 'not done' | undefined;
 } 
